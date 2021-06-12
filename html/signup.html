@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="shortcut icon" type="image/png" href="/img/logoicon.jpg.png">
+    <link rel="stylesheet" href="/boostrap/bootstrap.min.css">
+    <script src="/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/jquery/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/MainGui.css">
+ <style>
+     #ert1,#ert2,#ert3,#ert4,#ertname,#ertphone,#ertadd{
+         color: red;
+         font-size: 16px;
+     }
+ </style>
+<script>
+   $(document).ready(function(){
+    function testuser(){
+        var user=$("#name").val();
+   var regex=/^[a-zA-Z\s]+\D$/;
+   if(regex.test(user)){
+       $("#ertname").html("*");
+       return true;
+   }
+   else{
+    $("#ertname").html("Sai định dạng!!");
+       return false;
+   }
+   }
+  $("#name").blur(testuser);
+       function testname(){
+            var user=$("#user").val();
+       var regex=/^[a-zA-Z]{6,20}\d*$/;
+       if(regex.test(user)){
+           $("#ert1").html("*");
+           return true;
+       }
+       else{
+        $("#ert1").html("Sai định dạng!!");
+           return false;
+       }
+       }
+      $("#user").blur(testname);
+      function testpass(){
+          var pass=$("#pwd").val();
+          var regex=/^([a-zA-Z]+\d*)\S$/;
+          if(regex.test(pass)){
+            $("#ert2").html("*");
+            return true;
+        }
+        else{
+         $("#ert2").html("Sai định dạng!!");
+            return false;
+        }
+      }
+      $("#pwd").blur(testpass);
+      function testemail(){
+          var email=$("#email").val();
+          var regex=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]{2,4})+$/;
+          if(regex.test(email)){
+            $("#ert3").html("*");
+            return true;
+        }
+        else{
+         $("#ert3").html("Sai định dạng!!");
+            return false;
+        }
+      }
+      $("#email").blur(testemail);
+      function testpassagain(){
+        var pass=$("#pass").val();
+        var regex=/^([a-zA-Z]+\d*)\S$/;
+        if(regex.test(pass)){
+          $("#ert4").html("*");
+          return true;
+      }
+      else{
+       $("#ert4").html("Sai định dạng!!");
+          return false;
+      }
+    }
+      $("#pass").blur(testpassagain);
+      function testphone(){
+        var phone=$("#phone").val();
+        var regex=/((09|03|07|08|05)+([0-9]{8})\b)/g;
+        if(regex.test(phone)){
+          $("#ertphone").html("*");
+          return true;
+      }
+      else{
+       $("#ertphone").html("Sai định dạng!!");
+          return false;
+      }
+    }
+      $("#phone").blur(testphone);
+      function testadd(){
+        var address=$("#address").val();
+        var regex=/^.+$/;
+        if(regex.test(address)){
+          $("#ertadd").html("*");
+          return true;
+      }
+      else{
+       $("#ertadd").html("Sai định dạng!!");
+          return false;
+      }
+    }
+      $("#address").blur(testadd);
+   })
+</script>
+</head>
+<body>
+    <header id="header" style="background-color: #e79649;">
+    <div class="container">
+        <div class="row">
+            <div id="logo" class="col-md-4 col-sm-12 col-xs-12">
+                <h1>
+                     <a href="/html/MainGui.html" class="navbar-brand">
+                      <!-- Logo Image -->
+                      <!-- Logo Text -->
+                      <img src="/img/logo.jpg" class="img-thumbnail" width="304" height="235" style="margin-right: 90px;">
+                     
+                    </a>		
+                </h1>
+            </div>
+            <div id="search" class="col-md-5 col-sm-12 col-xs-12">
+                <form action="" method="get">
+                <input type="text" name="search" placeholder="Nhập từ khóa ..." style="width: 250px; margin-top: 25px;">
+                <input type="submit" name="submit"  value="Tìm Kiếm" style="font-weight: bold;font-size:spx; ">	
+               
+                </form>
+
+            </div>
+            <div class="col-md-3 col-ms-12 col-xs-12">
+            <a href="login.html" style="line-height: 118px; color:white; font-weight:bold; ">Đăng nhập</a>
+            <a href="signup.html" style="line-height: 118px; color:white; font-weight:bold; padding-left:30px">Đăng kí</a>
+            <a href="giohang.html" style="line-height: 118px; color:white; font-weight:bold; padding-left:30px">️ 🛒</a>
+            </div>
+            
+        </div>	
+            
+    </div>
+  </header>
+  <section id="body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 style="border-bottom: 0.5px rgb(139, 127, 127) solid;">Trang chủ >> <span style="color: #e79649;">Đăng ký tài khoản</span></h5>
+                        <h2 style="color: #e79649; ">Thông tin cá nhân</h2>
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="text">Name:</label>
+                                <input type="text" class="form-control" placeholder="Enter your name" id="name">
+                                <p id="ertname"></p>
+                            </div>
+                            <div class="form-group">
+                              <label for="text">User Name:</label>
+                              <input type="text" class="form-control" placeholder="Enter username" id="user">
+                              <p id="ert1"></p>
+                            </div>
+                            <div class="form-group">
+                              <label for="text">Password:</label>
+                              <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                              <p id="ert2"></p>
+                            </div>
+                             <div class="form-group">
+                                <label for="tel">Phone Number:</label>
+                                <input type="tel" class="form-control" placeholder="Enter phone number" id="phone">
+                                <p id="ertphone"></p>
+                          </div>
+                          <div class="form-group form-check">
+                            <label class="form-check-label">
+                              <label for=""><input class="form-check-input" type="radio"> Male</label>  
+                            <label for="" style="margin-left: 50px;"> <input type="radio" class="form-check-input"> Female</label>   
+                              </label>
+                          </div>
+                            <div class="form-group form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Remember me
+                              </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Đăng Ký</button> <br> <br> <br>
+                          </form>
+                         
+                    </div>
+                    <div class="col-md-6">
+                      
+                        <div class="form-group" style="margin-top: 78.5px;">
+                            <label for="email">Your Email:</label>
+                              <input type="email" class="form-control" placeholder="Enter email" id="email">
+                              <p id="ert3"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                              <input type="password" class="form-control" placeholder="Enter Your Password Again" id="pass">
+                              <p id="ert4"></p>
+                        </div>
+                         <div class="form-group">
+                            <label for="text">Address:</label>
+                            <input type="text" class="form-control" placeholder="Enter Your address" id="address">
+                            <p id="ertadd"></p>
+                       </div>
+                       <div class="form-group">
+                        <label for="date">Birth day:</label>
+                        <input type="date" class="form-control" id="sex">
+                        <p id="ertsex"></p>
+                       </div>
+                </div>
+            </div>
+          
+  </section>
+  <footer id="footer">			
+    <div id="footer-t">
+        <div class="container">
+            <div class="row">				
+                <div id="logo-f" class="col-md-3 col-sm-12 col-xs-12 text-center">						
+                     <span class="text-uppercase font-weight-bold" style="color:#fffffe; font-weight: bold;letter-spacing: 3px; font-size: 30px;">MINH TOÀN SPORT</span>			
+                </div>
+                <div id="about" class="col-md-3 col-sm-12 col-xs-12">
+                    <h3>Giới thiệu về chúng tôi</h3>
+                    <a href="#">Chính sách bán hàng</a> <br>
+                    <a href="#">Hợp tác kinh doanh</a> <br>
+                    <a href="#">Chính sách bảo mật</a> <br>
+                    <a href="#">Về chúng tôi</a> <br>
+                    <a href="#">Giới thiệu</a>
+                </div>
+                <div id="hotline" class="col-md-3 col-sm-12 col-xs-12">
+                    <h3>Hotline</h3>
+                    <p>Điện thoại: 0983586953</p>
+                    <p>Email: thethaominhtoan@gmail.com</p>
+                </div>
+                <div id="contact" class="col-md-3 col-sm-12 col-xs-12">
+                    <h3>CÔNG TY TNHH THỂ THAO MINH TOÀN</h3>
+                    <p>Trụ Sở 1: 61, Trần Quang Diệu, Phường Ô Chợ Dừa, Quận Đống Đa, Hà Nội</p>
+                    <p>Trụ sở 2: 124 Lê Quang Định, Phường 14, Quận Bình Thạnh, TPHCM</p>
+                </div>
+            </div>				
+        </div>
+        
+    </div>
+</footer>
+</body>
+</html>

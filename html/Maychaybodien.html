@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy chạy bộ điện</title>
+	<link rel="shortcut icon" type="image/png" href="/img/logoicon.jpg.png">
+    <link rel="stylesheet" href="/boostrap/bootstrap.min.css"> 
+    <link rel="stylesheet" href="/css/MainGui.css">
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/jquery/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+		$(function() {
+			var pull        = $('#pull');
+			menu        = $('nav ul');
+			menuHeight  = menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+		});
+
+		$(window).resize(function(){
+			var w = $(window).width();
+			if(w > 320 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			}
+		});
+		$(document).ready(function(){
+			// Activate Carousel
+			$("#demo").carousel();
+			  
+			// Enable Carousel Indicators
+			$(".item1").click(function(){
+			  $("#demo").carousel(0);
+			});
+			$(".item2").click(function(){
+			  $("#demo").carousel(1);
+			});
+			$(".item3").click(function(){
+			  $("#demo").carousel(2);
+			});
+			  
+			// Enable Carousel Controls
+			$(".carousel-control-prev").click(function(){
+			  $("#demo").carousel("prev");
+			});
+			$(".carousel-control-next").click(function(){
+			  $("#demo").carousel("next");
+			});
+		  });
+	</script>
+</head>
+<body>
+    <header id="header" style="background: #e79649;">
+		<div class="container">
+			<div class="row">
+				<div id="logo" class="col-md-4 col-sm-12 col-xs-12">
+					<h1>
+						 <a href="/html/MainGui.html" class="navbar-brand">
+					      <!-- Logo Image -->
+					      <!-- Logo Text -->
+                          <img src="/img/logo.jpg" class="img-thumbnail" width="304" height="235" style="margin-right: 90px;">
+					     
+					    </a>		
+					</h1>
+				</div>
+				<div id="search" class="col-md-5 col-sm-12 col-xs-12">
+					<form action="" method="get">
+					<input type="text" name="search" placeholder="Nhập từ khóa ..." style="width: 250px; margin-top: 25px;">
+					<input type="submit" name="submit"  value="Tìm Kiếm" style="font-weight: bold;font-size:spx; ">	
+                   
+					</form>
+
+				</div>
+                <div class="col-md-3 col-ms-12 col-xs-12">
+                <a href="login.html" style="line-height: 118px; color:white; font-weight:bold; ">Đăng nhập</a>
+				<a href="signup.html" style="line-height: 118px; color:white; font-weight:bold; padding-left:30px">Đăng kí</a>
+				<a href="giohang.html" style="line-height: 118px; color:white; font-weight:bold; padding-left:30px">️ 🛒</a>
+                </div>
+				
+			</div>	
+				
+		</div>
+	</header>
+    
+    <!--running-->
+    <section id="body">
+		<div class="container">
+			<div class="row">
+				<div id="main" class="col-md-12">
+					<!-- main -->
+					<!-- phan slide la cac hieu ung chuyen dong su dung jquey -->
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                          <li data-target="#demo" data-slide-to="0" class="item1 active"></li>
+                          <li data-target="#demo" data-slide-to="1" class="item2"></li>
+                          <li data-target="#demo" data-slide-to="2" class="item3"></li>
+                          <li data-target="#demo" data-slide-to="3" class="item4"></li>
+                        </ul>
+                        
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/img/header_run1.jpg" alt="" class="img img-thumbnail">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/img/header_run2.jpg" alt="" class="img img-thumbnail">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/img/header_run3.jpg" class="img img-thumbnail" alt=""/>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/img/header_run4.jpg" alt="" class="img img-thumbnail">
+                            </div>
+                        </div>
+                        
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </a>
+                      </div>
+                    
+				</div>
+				<div id="sidebar" class="col-md-3">
+					<nav id="menu">
+						
+						<ul>
+                        <center>
+							<li class="menu-item" style="color:#f78438;font-weight: bold">Danh mục sản phẩm</li>
+							<li class="menu-item"><a href="/html/MainGui.html" style="color: #f74747">🔥HOT HOT HOT🔥</a></li>
+                            <li class="menu-item"><a href="/html/Maychaybodien.html">Máy chạy bộ điện</a></li>
+							<li class="menu-item"><a href="/html/xadon_xakep.html" >Xà đơn-xà kép</a></li>
+                            <li class="menu-item"><a href="/html/phukientapgym.html" >Phụ kiện tập gym</a></li>
+                            <li class="menu-item"><a href="/html/maytapcobung.html" >Máy tập cơ bụng</a></li>
+							<li class="menu-item"><a href="/html/baodamBoxing.html">Bao đấm Boxing-Găng tay</a></li>
+							<li class="menu-item"><a href="/html/ghetapta_gianta.html">Ghế tập tạ - Giàn tạ đa năng</a></li>
+							<li class="menu-item"><a href="/html/tatay_banhta_donta.html">Tạ tay-Bánh tạ - Đòn tạ</a></li>
+							<li class="menu-item"><a href="/html/thamtapYoga.html">Thảm tập Yoga</a></li>
+                            <li class="menu-item"><a href="MainGui.html#footer" >Contact</a></li>
+
+						</center>							
+						</ul>
+						<!-- <a href="#" id="pull">Danh mục</a> -->
+ 					</nav>
+
+					<div id="banner-l" class="text-center">
+						<div class="banner-l-item">
+							<a href="/html/ghetapta_gianta.html"><img src="/img/nav-left1.jpg" alt="a" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="/html/phukientapgym.html"><img src="/img/nav-left-4.jpg" alt="a" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href=""><img src="/img/nav-left-5.gif" alt="a" class="img-thumbnail"></a>
+						</div>
+						<div class="banner-l-item">
+							<a href="/html/maytapcobung.html"><img src="/img/nav-left-7.gif" alt="a" class="img-thumbnail" ></a>
+						</div>
+					</div>
+				</div>
+                <div id="main" class="col-md-9">
+                <div id="wrap-inner">
+						<div class="products">
+							<h3 style="font-weight: bold;">Máy chạy bộ điện</h3>
+							<div class="product-list row">
+                                
+								
+								<div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px;">
+				
+				<a href="#"><img src="/img/may-chay-bo-dien-pf-112-new-gia-re1.jpg" class="img img-thumbnail"></a>
+					<p style="height:40px"><a href="#" style="font-weight: bold; color:#f78438" >MÁY CHẠY BỘ ĐIỆN PRO FITNESS PF-112D NEW</a></p> <br>
+					<p><a href="#"><del style="color: rgb(148, 13, 13);">15.999.000</del> 14.999.000/sp</a></p>	
+                    <p><a href="#">Loại : Máy chạy bộ điện</a></p>
+                    <p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									<div class="marsk">
+                                       <a href="#">Xem chi tiết</a>
+									</div>
+									
+                                 </div>
+                            
+							<div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px">
+				
+				<a href="#"><img src="/img/may-chay-bo-dien-hq-333.jpg" class="img img-thumbnail" ></a>
+			<p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >MÁY CHẠY BỘ ĐIỆN HQ 333 TẠI NHÀ CAO CẤP</a></p>
+					<p><a href="#"><del style="color: rgb(148, 13, 13);">14.999.000</del> 14.599.000/sp</a></p>
+                    <p><a href="#">Loại : máy chạy bộ điện</a></p>
+					<p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									
+
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>
+									
+                                    </div>	
+                                    <div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px">
+				
+				<a href="#"><img src="/img/may-chay-bo-dien-hq-6600.jpg" class="img img-thumbnail" ></a>
+					<p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >Máy chạy bộ điện HQ6600</a></p>
+					<p><a href="#"><del style="color: rgb(148, 13, 13);">14.399.000 </del> 14.000.000/sp</a></p>
+					<p><a href="#">Loại : Máy chạy bộ điện</a></p>
+                    <p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									
+
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>
+									
+                                    </div>	
+                                    
+                                    
+                        <div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px; ">
+				<a href="#"><img src="/img/5549842may-chay-bo-dien-vk-900-jpeg.jpg" class="img img-thumbnail"></a>
+				<p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >Máy chạy bộ điện VIKING900 </a></p>
+				<p><a href="#"><del style="color: rgb(148, 13, 13);">29.499.000 </del> 29.199.000/sp</a></p>
+				<p><a href="#">Loại : Máy chạy bộ điện</a></p>
+				<p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									
+
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>
+									
+                                    </div>		              
+                             <div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px">
+				
+				<a href="#"><img src="/img/maychaybodien2015.jpg" class="img img-thumbnail" ></a> <br>
+				<p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >MÁY CHẠY BỘ ĐIỆN YK-ET1402B MỚI 2015 </a></p>
+				<p><a href="#"><del style="color: rgb(148, 13, 13);">17.399.000</del> 17.099.000/sp</a></p>
+				<p><a href="#">Loại : Máy chạy bộ điện</a></p>
+				<p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									
+
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>
+									
+                                    </div>	
+                                    
+                                    <div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px">
+				
+				<a href="#"><img src="/img/3746126may-chay-dien-cao-cap-mht-2420m-jpeg.jpg" class="img img-thumbnail"></a>
+				<p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >MÁY CHẠY BỘ ĐIỆN MHT 2420M </a></p>
+				<p><a href="#"><del style="color: rgb(148, 13, 13);">15.399.000</del> 15.000.000/sp</a></p>
+				<p><a href="#">Loại : MÁy chạy bộ điện  </a></p>
+				<p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									
+
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>
+								
+                                    </div>	
+								
+								<div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px">
+				
+				<a href="#"><img src="/img/1817402may-chay-bo-dien-co-lon-mht-5053-jpeg.jpg" class="img img-thumbnail"></a>
+				<p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >Máy chạy bộ điện MHT 5053 </a></p>
+				<p><a href="#"><del style="color: rgb(148, 13, 13);">24.299.000</del> 23.899.000/sp</a></p>
+				<p><a href="#">Loại : Máy chạy bộ điện</a></p>
+				<p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>
+									
+                                    </div>	
+								
+								
+								<div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px">
+				
+				<a href="#"><img src="/img/5241610may-chay-bo-da-nang-tf-20as-jpeg.jpg"class="img img-thumbnail" ></a>
+				<p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >MÁY CHẠY BỘ ĐIỆN TECH FITNESS TF-20AS </a></p>
+				<p><a href="#"><del style="color: rgb(148, 13, 13);">199.000</del> 149.000/sp</a></p>
+				<p><a href="#">Loại : Máy chạy bộ điện </a></p>
+				<p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									
+
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>
+									
+                                    </div>	
+								
+								<div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px">
+				
+				<a href="#"><img src="/img/3207955may-chay-bo-dien-tech-fitness-tf-22as-jpeg.jpg" class="img img-thumbnail" ></a>
+				<p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >MÁY CHẠY BỘ ĐIỆN TECH FITNESS 22AS </a></p>
+				<p><a href="#"><del style="color: rgb(148, 13, 13);">18.199.000</del> 17.899.000/sp</a></p>
+				<p><a href="#">Loại : Máy chạy bộ điện   </a></p>
+				<p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+									
+
+									<div class="marsk">
+										<a href="#">Xem chi tiết</a>
+									</div>
+									
+                                    </div>	
+								
+                               <div class="product-item col-md-3 col-sm-8 col-xs-12" style="margin-right:20px;margin-bottom:10px;margin-left:10px;">
+				
+                   <a href="#"><img src="/img/may-chay-bo-dien-fitness-tf-16as.jpg" class="img img-thumbnail"></a>
+                     <p style="height:50px"><a href="#" style="font-weight: bold; color:#f78438" >MÁY CHẠY BỘ ĐIỆN TECH FITNESS TF-16AS</a></p>
+                    <p><a href="#"><del style="color: rgb(148, 13, 13);">16.099.000</del> 15.899.000/sp</a></p>
+                     <p><a href="#">Loại : Máy chạy bộ điện   </a></p>
+                     <p><a href="#" style="font-weight:bold">Freeship Giao hàng tận nơi</a></p>
+                            <div class="marsk">
+          
+                           <a href="#">Xem chi tiết</a>
+                           </div>
+                                                            
+                           </div>     		
+						
+						</div>	                                  	                	
+						</div>
+						
+					</div>
+                </div>
+					<!-- end main -->
+				</div>
+			</div>
+	</section>
+	<footer id="footer">			
+		<div id="footer-t">
+			<div class="container">
+				<div class="row">				
+					<div id="logo-f" class="col-md-3 col-sm-12 col-xs-12 text-center">						
+						 <span class="text-uppercase font-weight-bold" style="color:#fffffe; font-weight: bold;letter-spacing: 3px; font-size: 30px;">MINH TOÀN SPORT</span>			
+					</div>
+					<div id="about" class="col-md-3 col-sm-12 col-xs-12">
+						<h3>Giới thiệu về chúng tôi</h3>
+						<a href="#">Chính sách bán hàng</a> <br>
+						<a href="#">Hợp tác kinh doanh</a> <br>
+						<a href="#">Chính sách bảo mật</a> <br>
+						<a href="#">Về chúng tôi</a> <br>
+						<a href="#">Giới thiệu</a>
+					</div>
+					<div id="hotline" class="col-md-3 col-sm-12 col-xs-12">
+						<h3>Hotline</h3>
+						<p>Điện thoại: 0983586953</p>
+						<p>Email: thethaominhtoan@gmail.com</p>
+					</div>
+					<div id="contact" class="col-md-3 col-sm-12 col-xs-12">
+						<h3>CÔNG TY TNHH THỂ THAO MINH TOÀN</h3>
+						<p>Trụ Sở 1: 61, Trần Quang Diệu, Phường Ô Chợ Dừa, Quận Đống Đa, Hà Nội</p>
+						<p>Trụ sở 2: 124 Lê Quang Định, Phường 14, Quận Bình Thạnh, TPHCM</p>
+					</div>
+				</div>				
+			</div>
+			
+		</div>
+	</footer>
+</body>
+</html>
